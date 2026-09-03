@@ -1,22 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/index.html</loc>
+    <loc>https://bhagyashribuilds.online/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/contact.html</loc>
+    <loc>https://bhagyashribuilds.online/work/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bhagyashribuilds.online/work/pricing-payment-integration.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bhagyashribuilds.online/work/aws-cicd-infrastructure.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bhagyashribuilds.online/work/realtime-websocket-application.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bhagyashribuilds.online/work/ai-assisted-search.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bhagyashribuilds.online/contact.html</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/privacy.html</loc>
+    <loc>https://bhagyashribuilds.online/privacy.html</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/terms.html</loc>
+    <loc>https://bhagyashribuilds.online/terms.html</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
