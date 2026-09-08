@@ -170,10 +170,35 @@
       const text = `Hi, I'm ${name}.\nContact: ${contact}\nNeed: ${need}\n${msg ? 'Details: ' + msg : ''}`;
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
-      document.getElementById('leadFormWrap').style.display = 'none';
-      document.getElementById('leadSuccess').classList.add('show');
+      // Open WhatsApp *before* switching to the success state, and while we're
+      // still inside the click gesture — popup blockers and in-app browsers
+      // (Instagram/LinkedIn) can refuse this, and we need to know whether it
+      // worked so we don't tell the visitor "opening WhatsApp…" when nothing did.
+      const waWindow = window.open(url, '_blank');
 
-      window.open(url, '_blank');
+      const wrap = document.getElementById('leadFormWrap');
+      const success = document.getElementById('leadSuccess');
+      if(wrap) wrap.style.display = 'none';
+      if(!success) return;
+
+      if(!waWindow){
+        // Blocked. The lead was still POSTed above, so nothing is lost — but
+        // give them a real link to tap rather than a dead confirmation.
+        const heading = success.querySelector('h3');
+        if(heading) heading.textContent = 'Almost there — tap to open WhatsApp';
+        if(!success.querySelector('.lead-wa-fallback')){
+          const a = document.createElement('a');
+          a.className = 'btn btn-primary lead-wa-fallback';
+          a.href = url;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.textContent = 'Open WhatsApp with your message ✦';
+          a.style.marginTop = '14px';
+          success.appendChild(a);
+        }
+      }
+
+      success.classList.add('show');
     });
   }
 })();

@@ -215,6 +215,14 @@ p.hero-sub{ font-size:17px; line-height:1.65; color:var(--ink-soft); max-width:5
 .lead-success.show{ display:block; }
 .lead-success .check{ font-size:34px; margin-bottom:8px; }
 
+/* Shown only when JS is unavailable — the lead form submits via JS, so without
+   it the form is inert and these direct contact links are the way through. */
+.noscript-note{
+  border:1.5px solid var(--line); border-radius:10px; background:var(--panel-2);
+  padding:14px 16px; margin-bottom:18px; font-size:13.5px; color:var(--ink-soft); line-height:1.6;
+}
+.noscript-note a{ color:var(--accent); font-weight:600; }
+
 /* ---------- SECTION SCAFFOLDING ---------- */
 .section{ padding:88px 0; background:color-mix(in srgb, var(--bg) 94%, transparent); position:relative; z-index:1; }
 .section-alt{ background:color-mix(in srgb, var(--panel-2) 94%, transparent); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
