@@ -377,7 +377,9 @@ p.hero-sub{ font-size:17px; line-height:1.65; color:var(--ink-soft); max-width:5
 .faq-q .plus::after{ width:2px; height:14px; top:3px; left:9px; transition:transform .2s ease; }
 .faq-item.open .plus::after{ transform:scaleY(0); }
 .faq-a{ max-height:0; overflow:hidden; transition:max-height .25s ease; }
-.faq-item.open .faq-a{ max-height:220px; }
+/* Cap has to clear the tallest answer at the narrowest viewport, or overflow:hidden
+   silently clips the last lines. Tallest today is ~237px (service-page FAQs at 375px). */
+.faq-item.open .faq-a{ max-height:400px; }
 .faq-a p{ padding:0 4px 22px; font-size:14.5px; color:var(--ink-soft); line-height:1.65; margin:0; max-width:680px; }
 
 /* ---------- CONTACT (always dark, regardless of theme) ---------- */
