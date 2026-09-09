@@ -18,7 +18,7 @@ then visit `http://localhost:8123/index.html`. A `.claude/launch.json` config (`
 
 ## Architecture
 
-**No templating — every page is a standalone `.html` file.** Nav, footer, floating contact stack, and theme-toggle markup are duplicated by hand across every page. When changing nav links, footer columns, or contact details, you must edit every page individually (currently: `index.html`, `contact.html`, `privacy.html`, `terms.html`, `404.html`, `work/index.html` plus the 4 case studies in `work/`, and `services/index.html` plus the 6 service pages in `services/`).
+**No templating — every page is a standalone `.html` file.** Nav, footer, floating contact stack, and theme-toggle markup are duplicated by hand across every page. When changing nav links, footer columns, or contact details, you must edit every page individually (currently: `index.html`, `contact.html`, `privacy.html`, `terms.html`, `404.html`, `work/index.html` plus the 4 case studies in `work/`, `services/index.html` plus the 6 service pages in `services/`, and `blog/index.html` plus each article in `blog/`).
 
 Two nav variants exist: `index.html` has the full nav with in-page anchor links, a mobile burger panel, and the LinkedIn icon; every inner page (`work/`, `services/`, `contact.html`, the legal pages) uses a reduced nav — brand link home, theme toggle, and the primary CTA only. Inner pages rely on the breadcrumb and footer for navigation. Follow the reduced variant on any new inner page. `404.html` is the exception with a minimal footer and no Services column.
 
@@ -37,6 +37,14 @@ Two nav variants exist: `index.html` has the full nav with in-page anchor links,
 The same honesty constraints as the case studies apply here: **no invented metrics, no guaranteed-ranking claims, and no pricing numbers** — the only figures used anywhere are the two verified ones (90% less deployment effort, 60% faster API response). Service pages state limits plainly (solo freelancer, no 24/7 cover, no ranking guarantees); keep that voice on any new one.
 
 FAQ answers are capped by `.faq-item.open .faq-a{ max-height:400px }` in `styles.css`, and `overflow:hidden` silently clips anything taller. The tallest answer today is ~237px at a 375px viewport — if you add a longer one, re-measure at mobile width and raise the cap rather than letting it clip.
+
+**`/blog`:** `blog/index.html` lists articles using `.post-list` / `.post-item` — a **row list, not a card grid**. This is deliberate: `.service-grid` is a fixed 3-column grid, so a single post leaves an obviously broken two-thirds gap. The row list reads correctly at any article count. Each row is a left meta column (category, date, reading time) and a right column (title link, excerpt, "Read the article →"), collapsing to one column under 700px.
+
+Articles live flat at `blog/<slug>.html` — **no category subdirectories.** The audit specced `/blog/<category>/` index pages, but four near-empty category pages next to one article is exactly the thin-content pattern the same audit warns against. Add them once there's enough per category to justify one.
+
+Each article carries `Person` + `Article` + `BreadcrumbList` JSON-LD (`datePublished`/`dateModified` in `YYYY-MM-DD`); the index carries `Person` + `Blog` + `BreadcrumbList`. Article body prose uses `.legal-content`, the meta strip uses `.case-meta`, and the closing CTA uses `.case-cta` — same as service and case-study pages.
+
+Article constraints, same as everywhere else: **no invented statistics, no fabricated client anecdotes, and no pricing figures.** Article #1 is about pricing and deliberately contains no numbers — it explains what drives cost instead, and says plainly why it won't quote a figure. Keep 1–3 in-context internal links per article pointing at the relevant service page; more than that reads as link-stuffing.
 
 **`/work` case studies:** `work/index.html` lists all case studies; each case study (`work/pricing-payment-integration.html`, `work/aws-cicd-infrastructure.html`, `work/realtime-websocket-application.html`, `work/ai-assisted-search.html`) follows the same structure — breadcrumb, `.case-meta` grid (project type / role / stack), then Business Problem / Solution / My Role / Technical Challenges / Results, then a `.case-cta`. Client work is under NDA: **never name real companies/products, and never invent metrics.** Only two numbers are verified (90% less deployment effort, 60% faster API response, both from the AWS/CI/CD case study) — everything else stays qualitative. This constraint should hold for any new case study added later.
 

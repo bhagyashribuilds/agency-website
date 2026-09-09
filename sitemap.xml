@@ -55,6 +55,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bhagyashribuilds.online/blog/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bhagyashribuilds.online/blog/freelance-web-developer-cost-india.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bhagyashribuilds.online/work/pricing-payment-integration.html</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
