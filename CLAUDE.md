@@ -12,7 +12,7 @@ There is no build, lint, or test step — there's nothing to compile.
 
 To preview locally with working relative asset paths (opening an HTML file directly via `file://` can behave inconsistently for `fetch`/asset loading in some tools):
 ```bash
-python -m http.server 8123
+python3 -m http.server 8123
 ```
 then visit `http://localhost:8123/index.html`. A `.claude/launch.json` config (`static-preview`) is already set up to run this via the Browser pane's `preview_start`.
 
