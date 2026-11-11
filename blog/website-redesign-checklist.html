@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Website Redesign Checklist: What to Check Before You Rebuild | Bhagyashri Chudji</title>
+<meta name="description" content="A diagnostic checklist to run before you commit to a website redesign: what to measure, where to look, and how to tell whether you need a rebuild or a much smaller fix.">
+<link rel="canonical" href="https://bhagyashribuilds.online/blog/website-redesign-checklist.html">
+
+<script>
+  (function(){
+    try{
+      var t = localStorage.getItem('theme');
+      if(t === 'dark'){ document.documentElement.setAttribute('data-theme','dark'); }
+    }catch(e){}
+  })();
+</script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%2312161F'/%3E%3Cdefs%3E%3ClinearGradient id='ga' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234CC9F0'/%3E%3Cstop offset='100%25' stop-color='%232FA9D6'/%3E%3C/linearGradient%3E%3ClinearGradient id='gb' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23B98CFF'/%3E%3Cstop offset='100%25' stop-color='%237C3AED'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M40 40 h55 v20 a12 12 0 0 1 0 24 v26 h-55 v-26 a12 12 0 0 0 0 -24 z' fill='url%28%23ga%29'/%3E%3Cpath d='M85 55 h55 v70 h-55 v-26 a12 12 0 0 1 0 -24 z' fill='url%28%23gb%29' opacity='0.92'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bhagyashribuilds.online/blog/website-redesign-checklist.html">
+<meta property="og:title" content="The Website Redesign Checklist">
+<meta property="og:description" content="What to measure before you commit to a redesign, and how to tell whether you need a rebuild or a far smaller fix.">
+<meta property="og:image" content="https://bhagyashribuilds.online/ogimage.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Website Redesign Checklist">
+<meta name="twitter:description" content="What to measure before you commit to a redesign, and how to tell whether you need a rebuild or a far smaller fix.">
+<meta name="twitter:image" content="https://bhagyashribuilds.online/ogimage.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Bhagyashri Chudji",
+  "url": "https://bhagyashribuilds.online/",
+  "image": "https://bhagyashribuilds.online/ogimage.png",
+  "jobTitle": "Full-Stack Web Developer",
+  "description": "Freelance full-stack web developer specializing in backend and cloud engineering, based in Mumbai, India.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+  "email": "bhagyashri.chudji@gmail.com",
+  "telephone": "+91-93243-75046",
+  "sameAs": ["https://www.linkedin.com/in/bhagyashrichudji30"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Website Redesign Checklist: What to Check Before You Rebuild",
+  "description": "A diagnostic checklist to run before you commit to a website redesign: what to measure, where to look, and how to tell whether you need a rebuild or a much smaller fix.",
+  "author": { "@type": "Person", "name": "Bhagyashri Chudji", "url": "https://bhagyashribuilds.online/" },
+  "publisher": { "@type": "Person", "name": "Bhagyashri Chudji" },
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "image": "https://bhagyashribuilds.online/ogimage.png",
+  "mainEntityOfPage": "https://bhagyashribuilds.online/blog/website-redesign-checklist.html",
+  "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bhagyashribuilds.online/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bhagyashribuilds.online/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "The Website Redesign Checklist", "item": "https://bhagyashribuilds.online/blog/website-redesign-checklist.html" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="glow-layer"><div class="lg1"></div><div class="lg2"></div></div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-mark"><svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4CC9F0"/><stop offset="100%" stop-color="#2FA9D6"/></linearGradient><linearGradient id="bgB" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#B98CFF"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient><filter id="bgAGlow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#bgAGlow)"><path d="M40 40 h55 v20 a12 12 0 0 1 0 24 v26 h-55 v-26 a12 12 0 0 0 0 -24 z" fill="url(#bgA)"/><path d="M85 55 h55 v70 h-55 v-26 a12 12 0 0 1 0 -24 z" fill="url(#bgB)" opacity="0.92"/></g></svg></span><span class="brand-word"><span class="brand-name">Bhagyashri</span><span class="brand-sub">Builds</span></span></a>
+    <div class="nav-cta">
+      <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="btn btn-primary" href="../contact.html" style="padding:10px 18px; font-size:14px;">Let's Build Something</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="section">
+  <div class="wrap" style="max-width:820px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">/</span><a href="index.html">Blog</a><span class="sep">/</span><span class="current">Website redesign checklist</span>
+    </nav>
+    <div class="kicker">// article · redesign</div>
+    <h1 style="font-size:clamp(28px,3.8vw,40px); margin-bottom:20px;">The Website Redesign Checklist: What to Check Before You Rebuild</h1>
+    <p style="font-size:16.5px; color:var(--ink-soft); line-height:1.7; max-width:680px;">A redesign is the most expensive way to fix a website, and quite often it fixes the wrong thing. This is the diagnostic pass worth running first, so that whatever you end up paying for is aimed at the actual problem.</p>
+
+    <div class="case-meta">
+      <div class="case-meta-item"><div class="cm-k">Published</div><div class="cm-v">11 November 2026</div></div>
+      <div class="case-meta-item"><div class="cm-k">Reading time</div><div class="cm-v">10 minutes</div></div>
+      <div class="case-meta-item"><div class="cm-k">Written by</div><div class="cm-v">Bhagyashri Chudji, full-stack developer, Mumbai</div></div>
+    </div>
+
+    <div class="legal-content">
+      <h2>Most redesigns start from a feeling, not a finding</h2>
+      <p>The usual trigger for a redesign is someone looking at the site and deciding it looks old. That's a real signal and worth acting on, but it's a statement about the visual layer, and the visual layer is frequently not what's costing you anything.</p>
+      <p>Here's the pattern I see repeatedly. A business is unhappy with its website. It commissions a redesign. Six weeks later the site looks considerably better, and nothing measurable has changed, because the thing suppressing enquiries was a seven-second load on mobile, or a contact form that silently failed, or the fact that nobody could find the site in the first place. The new design inherited all three.</p>
+      <p>So before you scope a rebuild, spend an afternoon on the checklist below. It costs nothing, you can do nearly all of it yourself, and it turns "the site feels tired" into a list of specific defects. That list is what makes a quote accurate, and sometimes it reveals that you don't need a redesign at all.</p>
+
+      <h2>1. Write down what the site is actually for</h2>
+      <p>One sentence, concrete, with a verb in it. Not "represent the brand." Something closer to "get the right people to request a quote," or "let existing customers find the spare part they need without calling us."</p>
+      <p>Then write down how you'd know it was working. A number of enquiries per month, a ratio of calls that start with "I saw your site," anything you could actually observe. You don't need analytics sophistication for this. You need a stated purpose, because without one there is no way to judge whether any version of the site is succeeding, and no way for a developer to make trade-offs on your behalf.</p>
+      <p>This step sounds soft and is the one that most changes the outcome. Almost every bad redesign brief I've seen was a list of pages rather than a statement of purpose.</p>
+
+      <h2>2. Measure the speed before you blame the design</h2>
+      <p>Run your main pages through Google's PageSpeed Insights, and read the mobile tab rather than the desktop one. Desktop scores flatter everyone.</p>
+      <p>What matters there are the Core Web Vitals: how long the main content takes to appear, how quickly the page responds when someone taps something, and whether the layout jumps around while it loads. Google publishes target thresholds for each, and they move occasionally, so take the numbers from the tool rather than from an article. The tool will also tell you the cause, which is the genuinely useful part: oversized images, render-blocking scripts, fonts loading late, too much JavaScript for what the page does.</p>
+      <p>Note what it says, because this determines a lot. If the diagnosis is image weight and script bloat on an otherwise sensible site, that's a performance fix, not a redesign. It's a fraction of the cost and you can have it next week.</p>
+
+      <h2>3. Use the site on your own phone, on mobile data</h2>
+      <p>Not on the office wifi. Turn wifi off, open your own site on your phone, and try to do the main thing a customer would do. Get a quote. Find the price. Call you.</p>
+      <p>Pay attention to the friction rather than the appearance. Do you have to pinch to read anything? Are the tap targets close enough together that you hit the wrong one? Does a cookie banner or chat widget cover the content and refuse to close? Does the phone number actually dial when tapped? How many taps does it take to reach the contact details?</p>
+      <p>Then hand the phone to someone who has never seen the site and ask them to do the same thing without help. Watch where they hesitate. Two minutes of this is worth more than any amount of internal discussion about layout.</p>
+
+      <h2>4. Find out where people actually leave</h2>
+      <p>If you have analytics, look at the pages people land on, the pages they leave from, and how many arrive on mobile. If the gap between desktop and mobile behaviour is wide, you've found something.</p>
+      <p>If you don't have analytics installed, that is itself the first finding, and it's worth fixing before a redesign rather than after. Launching a new site with no baseline means you will never be able to say whether it helped. Install something now, let it run for a few weeks while you plan, and you'll have a before to compare against.</p>
+      <p>One specific thing to check: test your contact form end to end and confirm the message actually arrives. Silently broken forms are more common than anyone expects, and they look exactly like a traffic problem from the outside.</p>
+
+      <h2>5. Audit the content, not the layout</h2>
+      <p>List every page. For each one, mark it keep, merge, rewrite, or delete. Be unsentimental.</p>
+      <p>Most older sites carry pages nobody has read in years, several near-duplicate pages competing with each other, and one or two pages doing all the real work. A redesign that faithfully rebuilds all of it just carries the clutter across at a higher price. Deciding this before the build also shortens the build, because structure follows content rather than the other way round.</p>
+      <p>While you're there, check the obvious staleness: a copyright year that stopped advancing, staff who left, services you no longer offer, prices from a previous era. These undermine credibility more than a dated visual style does, and they cost nothing to fix.</p>
+
+      <h2>6. Check what's broken underneath</h2>
+      <p>This is the layer that's invisible until it isn't, and it's where I most often find the real problem:</p>
+      <ul>
+        <li><strong>Is the site actually indexed?</strong> Set up Google Search Console if you haven't, and read the Pages report. A site that search engines can't crawl properly has a problem no redesign will touch.</li>
+        <li><strong>Does every page have its own title and description?</strong> Duplicates across pages, or a title that says "Home" on every one, are common and cheap to fix.</li>
+        <li><strong>Is there a sitemap, and is it current?</strong></li>
+        <li><strong>Is anything accidentally blocked?</strong> A stray <code>noindex</code> or an overly broad <code>robots.txt</code> rule left over from a staging site will quietly keep you out of search results indefinitely.</li>
+        <li><strong>Does HTTPS work everywhere, with no mixed-content warnings?</strong></li>
+        <li><strong>Are there broken links and dead images?</strong> Run any free crawler over the site and see what comes back.</li>
+      </ul>
+      <p>If most of your findings land in this section and the design is otherwise serviceable, you're looking at <a href="../services/technical-seo.html">technical SEO work</a> rather than a redesign. That distinction is worth several weeks and a lot of money, which is why it's worth establishing before you brief anyone.</p>
+
+      <h2>7. Find out whether you can edit it yourself</h2>
+      <p>Try to change something small. A phone number, a sentence on the homepage, a photo. Time how long it takes and note how much of it you could do without help.</p>
+      <p>If the answer is that you have to email whoever built it three years ago and wait, that's a structural problem and a legitimate reason to rebuild on its own. A site you can't update is a site that decays on a schedule, and it will be out of date again regardless of how it looks on launch day.</p>
+      <p>While you're checking: do you control the domain registration and the hosting account, in your own name? Do you have the source code and the design files? If any of that sits with someone else, resolve it before you start a redesign, not during one.</p>
+
+      <h2>Now decide what you're actually buying</h2>
+      <p>With the findings in front of you, the decision usually resolves into one of three things, and they differ by roughly an order of magnitude in cost:</p>
+      <ul>
+        <li><strong>A targeted fix.</strong> The structure and design are fine; speed, search visibility, or a broken form are the problem. Days of work, not weeks. This is the right answer far more often than the industry admits.</li>
+        <li><strong>A front-end rebuild, same content.</strong> The copy still does its job but the build is slow, dated, or impossible to edit. You keep the words, replace the machinery, and get speed, mobile behaviour, accessibility, and editability. Usually the best value of the three.</li>
+        <li><strong>A full redesign.</strong> The business has changed, the content no longer describes what you do, or the site needs to do things it was never built to do. This is the real version, and it should be chosen deliberately rather than by default.</li>
+      </ul>
+      <p>If quotes you receive differ wildly, it's usually because the developers placed you in different tiers here. That's worth asking about directly, and it's the same dynamic I described in <a href="freelance-web-developer-cost-india.html">what actually drives the cost of a project</a>.</p>
+
+      <h2>If you do redesign, these are non-negotiable</h2>
+      <p>Whatever else is in the scope, make sure these are written into it. Each one is painful and expensive to retrofit:</p>
+      <ul>
+        <li><strong>Redirect mapping.</strong> Every old URL mapped to its new one with a 301. Rankings attach to URLs, and if the old ones 404, whatever they had accumulated is simply discarded. This is the single most common way a redesign loses traffic, and it's entirely preventable. The mechanics are set out on my <a href="../services/website-redesign.html">redesign service page</a>.</li>
+        <li><strong>Keep the pages that were already working.</strong> Identify them before the build and carry their titles, headings, and content across deliberately.</li>
+        <li><strong>Analytics continuity.</strong> Don't lose your baseline at the exact moment you need to prove the project worked.</li>
+        <li><strong>A launch checklist.</strong> Redirects verified, sitemap regenerated and submitted, staging rules removed, forms tested on the live site.</li>
+        <li><strong>Handover.</strong> Source, assets, and credentials to you, with domain and hosting in your name.</li>
+      </ul>
+      <p>One more worth saying plainly: nobody can guarantee a ranking outcome from a redesign. Done properly it protects what you already have and removes the things holding you back. Anyone promising a position is either confused or selling.</p>
+
+      <h2>What I check first</h2>
+      <p>When someone asks me about a redesign, I look at mobile performance, whether the site is being indexed properly, and whether the contact path actually works, in that order, before anything about how it looks. Often enough the honest answer is that a redesign is not the cheapest route to what they want, and I'd rather say so on the first call than take the larger project.</p>
+      <p>If it turns out you do need the full rebuild, the findings from this checklist become the brief, and the quote you get back will be far closer to the truth than one written from "we need a new website."</p>
+
+      <h2>The short version</h2>
+      <p>Write down what the site is for and how you'd know it was working. Measure speed on mobile. Use it on your own phone on mobile data. Check whether it's indexed, whether forms arrive, and whether you can edit it. Audit the content honestly.</p>
+      <p>Then decide between a targeted fix, a front-end rebuild, and a full redesign, with evidence rather than with a feeling. You'll either save a great deal of money, or you'll commission the redesign with a brief that's worth the price.</p>
+    </div>
+
+    <div class="case-cta">
+      <p>Not sure which of the three you need? Send me the URL and what's bothering you, and I'll tell you what I'd check first and whether a redesign is actually the right spend.</p>
+      <div class="links">
+        <a class="case-link" href="index.html">← More articles</a>
+        <a class="btn btn-primary" href="../contact.html">Ask about your site</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand"><span class="brand-mark"><svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bfA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4CC9F0"/><stop offset="100%" stop-color="#2FA9D6"/></linearGradient><linearGradient id="bfB" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#B98CFF"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient><filter id="bfAGlow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#bfAGlow)"><path d="M40 40 h55 v20 a12 12 0 0 1 0 24 v26 h-55 v-26 a12 12 0 0 0 0 -24 z" fill="url(#bfA)"/><path d="M85 55 h55 v70 h-55 v-26 a12 12 0 0 1 0 -24 z" fill="url(#bfB)" opacity="0.92"/></g></svg></span><span class="brand-word"><span class="brand-name">Bhagyashri</span><span class="brand-sub">Builds</span></span></div>
+        <p>Freelance full-stack web developer based in Mumbai, India — building production-ready websites, backend systems, and cloud infrastructure for founders and small teams.</p>
+        <div class="footer-social">
+          <a class="icon-btn" href="https://www.linkedin.com/in/bhagyashrichudji30" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21h-4V9Z"/></svg>
+          </a>
+          <a class="icon-btn" href="https://wa.me/919324375046?text=Hi%2C%20I%27d%20like%20to%20talk%20about%20a%20project" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.05 3.3 8.94 8.94 0 0 0 3.1 12.2c0 1.58.4 3.1 1.18 4.47L3 21.7l5.2-1.36a8.98 8.98 0 0 0 3.85.87h.01a8.94 8.94 0 0 0 8.94-8.9c0-2.39-.93-4.63-2.6-6.31Zm-5.55 13.7h-.01a7.42 7.42 0 0 1-3.78-1.04l-.27-.16-2.83.74.75-2.76-.18-.28a7.4 7.4 0 0 1-1.14-3.94 7.44 7.44 0 0 1 7.45-7.42c1.99 0 3.86.78 5.27 2.18a7.4 7.4 0 0 1 2.18 5.25 7.44 7.44 0 0 1-7.44 7.43Zm4.08-5.57c-.22-.11-1.32-.65-1.53-.73-.2-.08-.35-.11-.5.11-.15.22-.58.73-.71.88-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.21-.69-1.66-.18-.43-.37-.38-.5-.38-.13 0-.28-.02-.43-.02-.15 0-.4.06-.6.28-.2.22-.79.77-.79 1.87 0 1.1.81 2.17.92 2.32.11.15 1.59 2.43 3.86 3.4.54.23.96.37 1.29.48.54.17 1.03.15 1.42.09.43-.06 1.32-.54 1.51-1.06.19-.52.19-.96.13-1.06-.06-.09-.2-.15-.42-.26Z"/></svg>
+          </a>
+          <a class="icon-btn" href="mailto:bhagyashri.chudji@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services/website-development.html">Website development</a></li>
+          <li><a href="../services/backend-api-development.html">Backend &amp; API development</a></li>
+          <li><a href="../services/web-application-development.html">Web app development</a></li>
+          <li><a href="../services/maintenance-support.html">Ongoing support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../work/index.html">Work</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../contact.html">Contact us</a></li>
+          <li><a href="../privacy.html">Privacy policy</a></li>
+          <li><a href="../terms.html">Terms &amp; conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Bhagyashri Chudji — Freelance Web Developer, Mumbai, India</span>
+      <div class="legal-links">
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>
